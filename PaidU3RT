@@ -1,0 +1,481 @@
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+ 
+local Window = Fluent:CreateWindow({
+    Title = "U3RT PAID SCRIPT" .. Fluent.Version,
+    SubTitle = "Screw The Rules!",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(450, 500),
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+})
+ 
+--Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
+local Tabs = {
+    Main = Window:AddTab({ Title = "Main", Icon = "" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
+ 
+local Options = Fluent.Options
+ 
+do
+    Fluent:Notify({
+        Title = "Notification",
+        Content = "This is a notification",
+        SubContent = "SubContent", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
+ 
+ 
+ 
+    Tabs.Main:AddParagraph({
+        Title = "Paragraph",
+        Content = "U3RT ON TOP"
+    })
+ 
+ 
+ 
+    Tabs.Main:AddButton({
+        Title = "Lurnai Cracked",
+        Description = "Very fast",
+        Callback = function()
+            Window:Dialog({
+                Title = "Fast Rebirth",
+                Content = "Fast Rebirth",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+ 
+local oldKick
+oldKick = hookfunction(LocalPlayer.Kick, function(self, ...)
+    print("Kick attempt blocked!")
+    return nil
+end)
+ 
+local mt = getrawmetatable(game)
+local oldNamecall = mt.__namecall
+setreadonly(mt, false)
+ 
+mt.__namecall = newcclosure(function(self, ...)
+    local method = getnamecallmethod()
+    if method == "Kick" then
+        print("Namecall kick attempt blocked!")
+        return wait(9e9)
+    end
+    return oldNamecall(self, ...)
+end)
+ 
+setreadonly(mt, true)
+ 
+local function blockTeleports()
+    if game:GetService("TeleportService") then
+        for _, func in pairs(getgc()) do
+            if type(func) == "function" and getfenv(func).script and getfenv(func).script == game:GetService("TeleportService") then
+                hookfunction(func, function() 
+                    return wait(9e9)
+                end)
+            end
+        end
+    end
+end
+ 
+blockTeleports()
+wait(0.5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vortex7542/TriggerLOLASKDJW/refs/heads/main/LargeFileHUH!%3F"))()
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+ Tabs.Main:AddButton({
+        Title = "Fast Rebirths With Glitches",
+        Description = "Equips Neon Guardians then equips Tribal Overlords",
+        Callback = function()
+            Window:Dialog({
+                Title = "Fast Rebirth",
+                Content = "Fast Rebirth",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/JahNXUFz"))()
+                              end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+Tabs.Settings:AddButton({
+        Title = "Hide All Frames",
+        Description = "Less Lag",
+        Callback = function()
+            Window:Dialog({
+                Title = "Less Lag",
+                Content = "Low Fps and Low Ping",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                                            local _llI1l=game;local _1ll1I=_llI1l["\71\101\116\83\101\114\118\105\99\101"]('\82\101\112\108\105\99\97\116\101\100\83\116\111\114\97\103\101');local _Il1l1=function(_lI1ll)return _lI1ll:reverse():upper():lower()end;local _l1lII=function()return("emarf"):reverse()end;local _1lIl1=function(_II1l1)return _II1l1.Visible end;local _l1III=function(_I1ll1,_llI11)_I1ll1.Visible=_llI11 end;for _l1l1I,_1IlI1 in pairs(_1ll1I:GetChildren())do if(_1IlI1.Name:match(_l1lII().."$"))then _l1III(_1IlI1,false)end end;for _IllI1,_1Il1I in pairs(_1ll1I:GetDescendants())do if(_1Il1I.Name:lower():find(_l1lII()))then _l1III(_1Il1I,false)end end;task.wait();for _lIl11,_Il1II in pairs(_1ll1I:GetChildren())do pcall(function()if string.find(_Il1II.Name:lower(),_l1lII())then _l1III(_Il1II,false)end end)end
+    end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+Tabs.Main:AddButton({
+        Title = "Speed Grind",
+        Description = " Super Speed (With Swifts)",
+        Callback = function()
+            Window:Dialog({
+                Title = "Super Speed",
+                Content = "Speed Grind",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+local a = game:GetService("ReplicatedStorage")
+local b = game:GetService("Players")
+local c = b.LocalPlayer
+
+-- Função para equipar apenas o "Swift Samurai" (sem desequipar nada antes)
+local function k()
+    for m, n in pairs(c.petsFolder.Unique:GetChildren()) do
+        if n.Name == "Swift Samurai" then
+            a.rEvents.equipPetEvent:FireServer("equipPet", n)
+        end
+    end
+end
+
+-- Loop principal focado apenas em ganhar Strength rapidamente
+task.spawn(function()
+    k() -- Equipa o Swift Samurai no começo e não troca mais
+    
+    while true do
+        -- Farm de Strength (agora com 0.001s de delay)
+        for y = 1, 10 do
+            c.muscleEvent:FireServer("rep")
+        end
+        task.wait(0.001) -- Super rápido
+    end
+end)
+                    end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+ Tabs.Main:AddButton({
+        Title = "Pack Farm",
+        Description = "230K+ A DAY",
+        Callback = function()
+            Window:Dialog({
+                Title = "Pack Farm",
+                Content = "DO **NOT** EXECUTE IF YOU DONT WANNA REBIRTH",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            local a=game:GetService("ReplicatedStorage")local b=game:GetService("Players")local c=b.LocalPlayer;local d=function(e)local f=c.petsFolder;for g,h in pairs(f:GetChildren())do if h:IsA("Folder")then for i,j in pairs(h:GetChildren())do a.rEvents.equipPetEvent:FireServer("unequipPet",j)end end end;task.wait(.1)end;local k=function(l)d()task.wait(.01)for m,n in pairs(c.petsFolder.Unique:GetChildren())do if n.Name==l then a.rEvents.equipPetEvent:FireServer("equipPet",n)end end end;local o=function(p)local q=workspace.machinesFolder:FindFirstChild(p)if not q then for r,s in pairs(workspace:GetChildren())do if s:IsA("Folder")and s.Name:find("machines")then q=s:FindFirstChild(p)if q then break end end end end;return q end;local t=function()local u=game:GetService("VirtualInputManager")u:SendKeyEvent(true,"E",false,game)task.wait(.1)u:SendKeyEvent(false,"E",false,game)end;task.spawn(function()while true do local v=c.leaderstats.Rebirths.Value;local w=10000+(5000*v)if c.ultimatesFolder:FindFirstChild("Golden Rebirth")then local x=c.ultimatesFolder["Golden Rebirth"].Value;w=math.floor(w*(1-(x*0.1)))end;d()task.wait(.1)k("Swift Samurai")while c.leaderstats.Strength.Value<w do for y=1,10 do c.muscleEvent:FireServer("rep")end;task.wait()end;d()task.wait(.1)k("Tribal Overlord")local z=o("Jungle Bar Lift")if z and z:FindFirstChild("interactSeat")then c.Character.HumanoidRootPart.CFrame=z.interactSeat.CFrame*CFrame.new(0,3,0)repeat task.wait(.1)t()until c.Character.Humanoid.Sit end;local A=c.leaderstats.Rebirths.Value;repeat a.rEvents.rebirthRemote:InvokeServer("rebirthRequest")task.wait(.1)until c.leaderstats.Rebirths.Value>A;task.wait()end end)
+                    end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+Tabs.Main:AddButton({
+        Title = "BYPASS REBIRTH COOLDOWN (BETA)",
+        Description = "5.75 SECONDS",
+        Callback = function()
+            Window:Dialog({
+                Title = " BYPASS",
+                Content = "WARNING! THIS WILL LAG TF OUT OF YOUR GAME!",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheOrginalSoviet/U3RT/refs/heads/main/Bypass"))()
+               end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+ 
+    local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Early Update", Default = false })
+ 
+    Toggle:OnChanged(function()
+        game.Players.LocalPlayer.PlayerGui.currencyFrameGui.currencyFrame.limitedStockButton.Visible = true
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.currencyFrameGui.currencyFrame.rewardButton.Visible = true
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.limitedStockGui.Enabled = true
+game.Players.LocalPlayer.PlayerGui.limitedStockGui.limitedStockMenu.Visible = false
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.rightSideGui.specialOfferButton.Visible = true
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.inviteFriendsGui.Enabled = true
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.inviteFriendsGui.inviteRewardsMenu.Visible = false
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.updatesMenuGui.Enabled = true
+game.Players.LocalPlayer.PlayerGui.updatesMenuGui.updatesMenu.Visible = false
+game.Players.LocalPlayer.PlayerGui.updatesMenuGui.Enabled = true
+game.Players.LocalPlayer.PlayerGui.updatesMenuGui.Frame.Visible = false
+game.Players.LocalPlayer.PlayerGui.updatesMenuGui.Enabled = true
+
+local limitedStockButton = game.Players.LocalPlayer.PlayerGui.currencyFrameGui.currencyFrame.limitedStockButton
+limitedStockButton.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.PlayerGui.limitedStockGui.limitedStockMenu.Visible = true
+end)
+local xButton = game.Players.LocalPlayer.PlayerGui.limitedStockGui.limitedStockMenu.xButton
+xButton.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.PlayerGui.limitedStockGui.limitedStockMenu.Visible = false
+end)
+local alertsButton = game.Players.LocalPlayer.PlayerGui.currencyFrameGui.currencyFrame.rewardButton
+alertsButton.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.PlayerGui.updatesMenuGui.updatesMenu.Visible = true
+end)
+local xButtons = game.Players.LocalPlayer.PlayerGui.updatesMenuGui.updatesMenu.xButton
+xButtons.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.PlayerGui.updatesMenuGui.updatesMenu.Visible = false
+end)
+local friendButton = game.Players.LocalPlayer.PlayerGui.currencyFrameGui.inviteButton
+friendButton.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.inviteFriendsGui.inviteRewardsMenu.Visible = true
+end)
+local xbuttonss = game.Players.LocalPlayer.PlayerGui.inviteFriendsGui.inviteRewardsMenu.xButton
+xbuttonss.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.PlayerGui.inviteFriendsGui.inviteRewardsMenu.Visible = false
+end)
+    end)
+
+    local Slider = Tabs.Main:AddSlider("Slider", {
+        Title = "Slider",
+        Description = "This is a slider",
+        Default = 2,
+        Min = 0,
+        Max = 5,
+        Rounding = 1,
+        Callback = function(Value)
+            print("Slider was changed:", Value)
+        end
+    })
+ 
+    Slider:OnChanged(function(Value)
+        print("Slider changed:", Value)
+    end)
+ 
+    Slider:SetValue(3)
+ 
+ 
+ 
+    local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
+        Title = "Dropdown",
+        Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
+        Multi = false,
+        Default = 1,
+    })
+ 
+    Dropdown:SetValue("four")
+ 
+    Dropdown:OnChanged(function(Value)
+        print("Dropdown changed:", Value)
+    end)
+ 
+ 
+ 
+    local MultiDropdown = Tabs.Main:AddDropdown("MultiDropdown", {
+        Title = "Dropdown",
+        Description = "You can select multiple values.",
+        Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
+        Multi = true,
+        Default = {"seven", "twelve"},
+    })
+ 
+    MultiDropdown:SetValue({
+        three = true,
+        five = true,
+        seven = false
+    })
+ 
+    MultiDropdown:OnChanged(function(Value)
+        local Values = {}
+        for Value, State in next, Value do
+            table.insert(Values, Value)
+        end
+        print("Mutlidropdown changed:", table.concat(Values, ", "))
+    end)
+ 
+ 
+ 
+    local Colorpicker = Tabs.Main:AddColorpicker("Colorpicker", {
+        Title = "Colorpicker",
+        Default = Color3.fromRGB(96, 205, 255)
+    })
+ 
+    Colorpicker:OnChanged(function()
+        print("Colorpicker changed:", Colorpicker.Value)
+    end)
+ 
+    Colorpicker:SetValueRGB(Color3.fromRGB(0, 255, 140))
+ 
+ 
+ 
+    local TColorpicker = Tabs.Main:AddColorpicker("TransparencyColorpicker", {
+        Title = "Colorpicker",
+        Description = "but you can change the transparency.",
+        Transparency = 0,
+        Default = Color3.fromRGB(96, 205, 255)
+    })
+ 
+    TColorpicker:OnChanged(function()
+        print(
+            "TColorpicker changed:", TColorpicker.Value,
+            "Transparency:", TColorpicker.Transparency
+        )
+    end)
+ 
+ 
+ 
+    local Keybind = Tabs.Main:AddKeybind("Keybind", {
+        Title = "KeyBind",
+        Mode = "Toggle", -- Always, Toggle, Hold
+        Default = "LeftControl", -- String as the name of the keybind (MB1, MB2 for mouse buttons)
+ 
+        -- Occurs when the keybind is clicked, Value is `true`/`false`
+        Callback = function(Value)
+            print("Keybind clicked!", Value)
+        end,
+ 
+        -- Occurs when the keybind itself is changed, `New` is a KeyCode Enum OR a UserInputType Enum
+        ChangedCallback = function(New)
+            print("Keybind changed!", New)
+        end
+    })
+ 
+    -- OnClick is only fired when you press the keybind and the mode is Toggle
+    -- Otherwise, you will have to use Keybind:GetState()
+    Keybind:OnClick(function()
+        print("Keybind clicked:", Keybind:GetState())
+    end)
+ 
+    Keybind:OnChanged(function()
+        print("Keybind changed:", Keybind.Value)
+    end)
+ 
+    task.spawn(function()
+        while true do
+            wait(1)
+ 
+            -- example for checking if a keybind is being pressed
+            local state = Keybind:GetState()
+            if state then
+                print("Keybind is being held down")
+            end
+ 
+            if Fluent.Unloaded then break end
+        end
+    end)
+ 
+    Keybind:SetValue("MB2", "Toggle") -- Sets keybind to MB2, mode to Hold
+ 
+ 
+    local Input = Tabs.Main:AddInput("Input", {
+        Title = "Input",
+        Default = "Default",
+        Placeholder = "Placeholder",
+        Numeric = false, -- Only allows numbers
+        Finished = false, -- Only calls callback when you press enter
+        Callback = function(Value)
+            print("Input changed:", Value)
+        end
+    })
+ 
+    Input:OnChanged(function()
+        print("Input updated:", Input.Value)
+    end)
+end
+ 
+ 
+-- Addons:
+-- SaveManager (Allows you to have a configuration system)
+-- InterfaceManager (Allows you to have a interface managment system)
+ 
+-- Hand the library over to our managers
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+ 
+-- Ignore keys that are used by ThemeManager.
+-- (we dont want configs to save themes, do we?)
+SaveManager:IgnoreThemeSettings()
+ 
+-- You can add indexes of elements the save manager should ignore
+SaveManager:SetIgnoreIndexes({})
+ 
+-- use case for doing it this way:
+-- a script hub could have themes in a global folder
+-- and game configs in a separate folder per game
+InterfaceManager:SetFolder("FluentScriptHub")
+SaveManager:SetFolder("FluentScriptHub/specific-game")
+ 
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+ 
+ 
+Window:SelectTab(1)
+ 
+Fluent:Notify({
+    Title = "Fluent",
+    Content = "The script has been loaded.",
+    Duration = 8
+})
+ 
+-- You can use the SaveManager:LoadAutoloadConfig() to load a config
+-- which has been marked to be one that auto loads!
+SaveManager:LoadAutoloadConfig()
